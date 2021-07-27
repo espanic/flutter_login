@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login/size.dart';
 
+
 class CustomTextFormField extends StatelessWidget {
   final String text;
-  const CustomTextFormField({required this.text});
+  final mValide;
+  const CustomTextFormField({required this.text, required this.mValide});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,8 +15,7 @@ class CustomTextFormField extends StatelessWidget {
         Text("$text"),
         SizedBox(height: small_gap),
         TextFormField(
-          validator: (value) =>
-              value!.isEmpty ? "Please enter some text" : null,
+          validator: mValide,
           obscureText: text == "Password" ? true : false,
           decoration: InputDecoration(
             hintText: "Enter $text",
