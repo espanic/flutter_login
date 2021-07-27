@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login/size.dart';
 
-
 class CustomTextFormField extends StatelessWidget {
   final String text;
   final mValide;
